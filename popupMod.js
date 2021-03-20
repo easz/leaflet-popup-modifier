@@ -184,7 +184,12 @@ L.Popup.include({
 
       this.update();
       L.DomEvent.stop(e);
-
+      var event = new CustomEvent("saveMarker", {
+        detail: {
+          marker: this._source
+        }
+      });
+      document.dispatchEvent(event);
       //  ---------------------End my additions --------------------------------------- //
 
 
