@@ -115,7 +115,8 @@ L.Popup.include({
       var editScreen = this._editScreen = L.DomUtil.create('div', 'leaflet-popup-edit-screen', wrapper)
       var inputField = this._inputField = L.DomUtil.create('div', 'leaflet-popup-input', editScreen);
       inputField.setAttribute("contenteditable", "true");
-      inputField.innerHTML = this.getContent()
+      inputField.innerHTML = this.getContent();
+      inputField.focus();
 
 
       //  -----------  Making the input field grow till max width ------- //
